@@ -16,5 +16,18 @@ Player.prototype.removeCard = function (card) {
   this.cards.splice(indexOfCard, 1);
 };
 
+Player.prototype.removeAllCards = function () {
+  while(this.cards.length > 0) {
+    this.cards.pop();
+  }
+};
 
-module.exports = Player;
+Player.prototype.getCardCatagoryValue = function (category) {
+  const cardToBePlayed = this.cards.pop();
+  return cardToBePlayed[category];
+};
+
+
+
+
+  module.exports = Player;

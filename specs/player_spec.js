@@ -37,5 +37,12 @@ describe("player", function(){
       const result = player.cardCount();
       assert.strictEqual(result, 0);
     });
+    it("can remove all cards", function(){
+      player.addCard(card1);
+      player.addCard(card2);
+      player.removeAllCards();
+      const result = player.cardCount();
+      assert.strictEqual(result, 0);
+    });
   });
 });
