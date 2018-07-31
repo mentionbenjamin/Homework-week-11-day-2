@@ -22,12 +22,12 @@ Player.prototype.removeAllCards = function () {
   }
 };
 
-Player.prototype.getCardCatagoryValue = function (category) {
+Player.prototype.getCardAttributeValue = function (attribute) {
   const cardToBePlayed = this.cards.pop();
-  return cardToBePlayed[category];
+  return cardToBePlayed[attribute];
 };
 
-
+// player1.getCardAttributeValue('strength')
 
 
   module.exports = Player;
