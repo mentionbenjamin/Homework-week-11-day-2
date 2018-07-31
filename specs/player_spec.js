@@ -9,6 +9,7 @@ describe("player", function(){
   beforeEach(function(){
     player = new Player("Fat Bob");
     card1 = new Card("Superman", 6, 9, 7);
+    card2 = new Card("Batman", 5, 3, 9);
   });
 
   it("has a name", function(){
@@ -30,6 +31,11 @@ describe("player", function(){
       const result = player.cardCount();
       assert.strictEqual(result, 1);
     });
-
+    it("can remove cards", function(){
+      player.addCard(card1);
+      player.removeCard(card1);
+      const result = player.cardCount();
+      assert.strictEqual(result, 0);
+    });
   });
 });
