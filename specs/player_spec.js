@@ -1,5 +1,6 @@
 const assert = require("assert");
 const Player = require("../player.js");
+const Card = require("../card.js");
 
 describe("player", function(){
 
@@ -7,6 +8,7 @@ describe("player", function(){
 
   beforeEach(function(){
     player = new Player("Fat Bob");
+    card1 = new Card("Superman", 6, 9, 7);
   });
 
   it("has a name", function(){
@@ -22,6 +24,11 @@ describe("player", function(){
     it("has cards count", function(){
       const result = player.cardCount();
       assert.strictEqual(result, 0);
+    });
+    it("can add cards", function(){
+      player.addCard(card1);
+      const result = player.cardCount();
+      assert.strictEqual(result, 1);
     });
 
   });

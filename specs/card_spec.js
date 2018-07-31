@@ -1,7 +1,7 @@
 const assert = require("assert");
 const Card = require("../card.js");
 
-describe("Card", function(){
+describe("card", function(){
   let card;
   beforeEach(function(){
     card = new Card("Superman", 6, 9, 7);
