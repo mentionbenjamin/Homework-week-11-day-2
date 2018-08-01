@@ -30,4 +30,4 @@ Player.prototype.getCardAttributeValue = function (attribute) {
 // player1.getCardAttributeValue('strength')
 
 
-  module.exports = Player;
+module.exports = Player;
