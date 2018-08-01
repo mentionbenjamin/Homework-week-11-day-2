@@ -28,8 +28,8 @@ Game.prototype.playRound = function (player1, player2) {
   let attribute = "strength";
   if(player1.getCardAttributeValue(attribute) > player2.getCardAttributeValue(attribute)){
     return "Player 1 wins";
-    }else{
-      return"Player 2 wins";
+    } else {
+    return "Player 2 wins";
     }
 };
 
